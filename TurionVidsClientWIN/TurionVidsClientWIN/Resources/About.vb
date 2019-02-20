@@ -25,6 +25,9 @@
     Private Sub TurionVidsLinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles TurionVidsLinkLabel2.LinkClicked
         Process.Start("http://turion64.fr.nf/projets/TurionVidsClient/")
     End Sub
+    Private Sub GithubLinkLabel_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles GithubLinkLabel.LinkClicked
+        Process.Start("https://github.com/turion64guy/TurionVidsVBclient/")
+    End Sub
     Private Sub animTimerSub() Handles animTimer.Tick
         Dim x As Integer
         Dim y As Integer

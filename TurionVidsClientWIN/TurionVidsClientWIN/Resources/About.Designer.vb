@@ -31,6 +31,7 @@ Partial Class About
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.VersionLabel = New System.Windows.Forms.Label()
+        Me.GithubLinkLabel = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -117,11 +118,22 @@ Partial Class About
         Me.VersionLabel.Size = New System.Drawing.Size(0, 13)
         Me.VersionLabel.TabIndex = 8
         '
+        'GithubLinkLabel
+        '
+        Me.GithubLinkLabel.AutoSize = True
+        Me.GithubLinkLabel.Location = New System.Drawing.Point(142, 74)
+        Me.GithubLinkLabel.Name = "GithubLinkLabel"
+        Me.GithubLinkLabel.Size = New System.Drawing.Size(254, 13)
+        Me.GithubLinkLabel.TabIndex = 9
+        Me.GithubLinkLabel.TabStop = True
+        Me.GithubLinkLabel.Text = "https://github.com/turion64guy/TurionVidsVBclient/"
+        '
         'About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(431, 137)
+        Me.Controls.Add(Me.GithubLinkLabel)
         Me.Controls.Add(Me.VersionLabel)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TurionVidsLinkLabel2)
@@ -150,4 +162,5 @@ Partial Class About
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents VersionLabel As System.Windows.Forms.Label
+    Friend WithEvents GithubLinkLabel As System.Windows.Forms.LinkLabel
 End Class

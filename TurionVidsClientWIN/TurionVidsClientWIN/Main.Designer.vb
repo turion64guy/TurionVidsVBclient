@@ -44,6 +44,7 @@ Partial Class Main
         Me.ResComboBox = New System.Windows.Forms.ComboBox()
         Me.FullScreenButton = New System.Windows.Forms.Button()
         Me.BGWmplayer = New System.ComponentModel.BackgroundWorker()
+        Me.ReloadVideoListButton = New System.Windows.Forms.Button()
         CType(Me.WMPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.TopBar.SuspendLayout()
@@ -100,25 +101,25 @@ Partial Class Main
         'OuvrirVideoIDToolStripMenuItem
         '
         Me.OuvrirVideoIDToolStripMenuItem.Name = "OuvrirVideoIDToolStripMenuItem"
-        Me.OuvrirVideoIDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OuvrirVideoIDToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.OuvrirVideoIDToolStripMenuItem.Text = "Ouvrir VideoID"
         '
         'InitialisationToolStripMenuItem
         '
         Me.InitialisationToolStripMenuItem.Name = "InitialisationToolStripMenuItem"
-        Me.InitialisationToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InitialisationToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.InitialisationToolStripMenuItem.Text = "Initialisation"
         '
         'RéglagesToolStripMenuItem
         '
         Me.RéglagesToolStripMenuItem.Name = "RéglagesToolStripMenuItem"
-        Me.RéglagesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RéglagesToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.RéglagesToolStripMenuItem.Text = "Réglages"
         '
         'QuitterToolStripMenuItem
         '
         Me.QuitterToolStripMenuItem.Name = "QuitterToolStripMenuItem"
-        Me.QuitterToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuitterToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.QuitterToolStripMenuItem.Text = "Quitter"
         '
         'AboutTopBarButton
@@ -230,11 +231,23 @@ Partial Class Main
         Me.FullScreenButton.Text = "Plein écran"
         Me.FullScreenButton.UseVisualStyleBackColor = True
         '
+        'ReloadVideoListButton
+        '
+        Me.ReloadVideoListButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ReloadVideoListButton.BackgroundImage = Global.TurionVidsClientWIN.My.Resources.Resources.reload_icon
+        Me.ReloadVideoListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ReloadVideoListButton.Location = New System.Drawing.Point(871, 7)
+        Me.ReloadVideoListButton.Name = "ReloadVideoListButton"
+        Me.ReloadVideoListButton.Size = New System.Drawing.Size(23, 23)
+        Me.ReloadVideoListButton.TabIndex = 9
+        Me.ReloadVideoListButton.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 631)
+        Me.Controls.Add(Me.ReloadVideoListButton)
         Me.Controls.Add(Me.FullScreenButton)
         Me.Controls.Add(Me.ResComboBox)
         Me.Controls.Add(Me.AboutVideo)
@@ -276,4 +289,5 @@ Partial Class Main
     Friend WithEvents AboutTopBarButton As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents CheckForUpdates As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AProposToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ReloadVideoListButton As System.Windows.Forms.Button
 End Class

@@ -101,6 +101,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property reload_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("reload_icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
         '''</summary>
         Friend ReadOnly Property TurionVidsIcon() As System.Drawing.Icon

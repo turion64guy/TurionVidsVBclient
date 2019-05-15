@@ -28,14 +28,25 @@ Namespace My
             Catch ex As Exception
                 'TODO : i really need to fix this shit
             End Try
+            'Throw New System.Exception("Debug Exception, no need to worry") 'For Debug
         End Sub
         Private Sub ExError(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
             Dim ex As Exception
             ex = e.Exception
-            MessageBox.Show("TurionVids à rencontré une exception non-gérée :" & vbNewLine & "___________________________" & vbNewLine & ex.ToString, "Unhandled Exception", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show( _
+"████░█░░█░░███░█░░" & vbNewLine & _
+"█░░░░█░░█░█░░░░█░█" & vbNewLine & _
+"███░░█░░█░█░░░░██░" & vbNewLine & _
+"█░░░░████░░███░█░█" & vbNewLine & _
+"> Ho well, TurionVids à rencontré une exception non-gérée :" & vbNewLine & vbNewLine & _
+"[_____________¯\_(ツ)_/¯____________]" & vbNewLine & _
+ex.ToString & vbNewLine & _
+"[___________________________________]" & vbNewLine & vbNewLine & _
+"Pas de CHANCE..." & vbNewLine & _
+"##############################" & vbNewLine & _
+"# L'application va se fermer #" & vbNewLine & _
+"##############################", "TurionVids s'est suicidé : Unhandled Exception", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Sub
     End Class
-
-
 End Namespace
 

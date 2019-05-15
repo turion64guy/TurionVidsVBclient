@@ -242,6 +242,12 @@
     Private Sub AProposToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AProposToolStripMenuItem.Click
         About.Show()
     End Sub
+
+    Private Sub ReloadVideoList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReloadVideoListButton.Click
+        ReloadVideoListButton.Enabled = False ' To FIX : Find a good way to stop the user from clicking while the list is reloading
+        RefreshVideoList()
+        ReloadVideoListButton.Enabled = True
+    End Sub
 End Class
 
 Public Class APIrequest
@@ -304,7 +310,7 @@ Public Class APIrequest
             tmp.RemoveRange(0, 3) 'removing "ok:"
             Dim tmp2 As String = String.Join("", tmp.ToArray()) 'replace api's New Line character to VB new line character
             tmp2 = tmp2.Replace(vbLf, vbCrLf)
-            'tmp2 = System.Text.Encoding.Default.GetString(System.Text.Encoding.UTF8.GetBytes(tmp2))   'marche po :(
+            'tmp2 = System.Text.Encoding.Default.GetString(System.Text.Encoding.UTF8.GetBytes(tmp2))   'marche po :( 
             Return (tmp2)
         Else
             Return 0
@@ -497,7 +503,10 @@ Public Class Player
     Shared Function FullScreen()
         Select Case usedPlayer
             Case Is = 0
-                Main.WMPlayer.fullScreen = 1
+                Try
+                    Main.WMPlayer.fullScreen = 1
+                Catch
+                End Try
             Case Is = 1
                 VLCPlayer.FullscreenEnabled = 1
                 VLCPlayer.video.fullscreen = 1
